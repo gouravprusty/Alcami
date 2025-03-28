@@ -197,6 +197,46 @@ li {list-style: none;}
 	transform: rotate(-45deg) translate(6px, -6px);
 }
 
+.mobile_menu_container{
+	position: absolute;
+	top: -100vh;
+	left: 0;
+	right: 0;
+	background-color: #fff;
+	padding: 20px 20px;
+	z-index: 1;
+	height: 100vh;
+	transition: all 0.5s linear;
+}
+.mobile_menu_container.active{
+	top: 0;
+}
+.mobile_menu{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+.mobile_menu li{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.mobile_menu li.menu_close{
+	font-size: 24px;
+	place-self: flex-end;
+	width: 30px;
+}
+.mobile_menu li a{
+	width: 100%;
+	font-family: New Rail Alphabet;
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 140%;
+	padding: 10px 0;
+	text-align: left;
+}
+
 /* -- HERO SECTION -- */
 .hero_section{
 	width: 100%;

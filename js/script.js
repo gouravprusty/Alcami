@@ -138,6 +138,14 @@ accordions.forEach((accordion) => {
 });
 
 const menu_icon = document.querySelector(".hamburger_menu");
+const menu_container = document.querySelector(".mobile_menu_container");
+const menu_close = document.querySelector(".menu_close");
+
 menu_icon.addEventListener("click", () => {
     menu_icon.classList.toggle("active");
+    menu_container.classList.toggle("active");
+});
+menu_close.addEventListener("click", () => {
+    menu_icon.classList.toggle("active");
+    menu_container.classList.toggle("active");
 });
