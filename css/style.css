@@ -2163,6 +2163,7 @@ br.show_mob{
 	.newsletter form input {width: 68%;height: 45px; font-size: 14px;}
 	.newsletter form button {width: 28%;height: 45px;}
 	.footer_bottom {font-size: 14px;}
+	br.hide_tab{display: none;}
 }
 
 @media only screen and (max-width:767px){
