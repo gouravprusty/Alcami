@@ -2170,7 +2170,7 @@ br.show_mob{
 	.container{width:100%; padding:0 15px; max-width:600px; box-sizing:border-box;}
 	.top_strip {padding: 12px 0;border-radius: 0;}
 	.top_strip__text {font-size: 10px;line-height: 14px;}
-	.header__logo {width: 100px;}
+	.header__logo {width: 120px;}
 	.header__search_button, .header__button{display: none;}
 	.hero_section {padding: 10px 0;}
 	.hero_rating{text-align: left;font-size: 14px;}
