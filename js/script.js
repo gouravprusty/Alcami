@@ -136,3 +136,8 @@ accordions.forEach((accordion) => {
         }
     });
 });
+
+const menu_icon = document.querySelector(".hamburger_menu");
+menu_icon.addEventListener("click", () => {
+    menu_icon.classList.toggle("active");
+});
