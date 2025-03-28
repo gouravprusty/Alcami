@@ -2191,7 +2191,7 @@ br.show_mob{
 	.s1_text {font-size: 16px;line-height: 22px;}
 	.s1_mob_product{display: flex;}
 	.grnt_inner {padding: 25px 20px; row-gap: 15px;}
-	.grnt_list {row-gap: 20px;}
+	.grnt_list {row-gap: 20px; max-width: 280px;}
 	.grnt_list li {width: 100%;}
 	.seen_strip {padding: 30px 0 0;}
 	.seen_inner{flex-direction: column; row-gap: 10px;}
@@ -2236,7 +2236,7 @@ br.show_mob{
 	.s5_steps {width: 100%;}
 	.section6 {width: 100%;padding: 30px 0 30px;}
 	.s6_inner {row-gap: 20px;flex-direction: column;}
-	.s6_inner li{width: 100%;flex-direction: row;column-gap: 20px;align-items: center;}
+	.s6_inner li{width: 100%;max-width:456px;flex-direction: row;column-gap: 20px;align-items: center;}
 	.s7_lines {font-size: 20px;line-height: 1px;}
 	.s7_heading {margin-top: 20px;font-size: 26px;line-height: 1.2;}
 	.s7_heading span{width: 100%;}
