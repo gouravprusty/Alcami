@@ -525,10 +525,6 @@ li {list-style: none;}
 	position: relative;
 	background-color: #F9F9F9;
 	border-radius: 16px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	overflow: hidden;
 }
 .s2_slider_modal img{
 	max-width: 100%;
@@ -549,6 +545,7 @@ li {list-style: none;}
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	z-index: 1;
 }
 .slide_buttons button{
 	width: 39px;
@@ -560,32 +557,21 @@ li {list-style: none;}
 	align-items: center;
 	justify-content: center;
 }
-.pagination {
-    margin-top: 10px;
-}
-.dot {
-    height: 8px;
-    width: 8px;
-    margin: 4px;
-    border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
-	border: 1px solid #322D2D;
-}
-.dot.active {
-	border: 1px solid #322D2D;
-    background-color: #322D2D;
-}
 .thumb_list{
 	width: 100%;
 	margin-top: 30px;
 	display: flex;
-	row-gap: 30px;
+	row-gap: 25px;
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
-.thumb_list img{
+.thumb_list .swiper-slide{
 	width: 22%;
+}
+.thumb_list img{
+	display: block;
+	margin: 0 auto;
+	width: 100%;
 	background-color: #F9F9F9;
 	border-radius: 12px;
 	cursor: pointer;
@@ -1510,6 +1496,7 @@ li {list-style: none;}
 	justify-content: space-between;
 	row-gap: 25px;
 	flex: 0 0 calc(33.33% - 20px);
+	text-align: left;
 }
 .s9_card_rating{
 	width: 100%;
@@ -1545,19 +1532,30 @@ li {list-style: none;}
 	left: 0;
 	border-radius: 50%;
 }
+.pagination.swiper-pagination-bullets.swiper-pagination-horizontal{
+	width: auto;
+}
 .s9_pagination {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	column-gap: 8px;
 }
-.s9_dot {
-    height: 8px;
+.swiper {
+	width: 100%;
+	height: 100%;
+}
+.pagination .swiper-pagination-bullet,
+.s9_pagination .swiper-pagination-bullet{
+	height: 8px;
     width: 8px;
     border-radius: 50%;
     cursor: pointer;
 	border: 1px solid #322D2D;
+	background-color: transparent;
+	margin: 0;
+	opacity: 1;
 }
-.s9_dot.active {
-    background-color: #322D2D;
+.pagination .swiper-pagination-bullet-active,
+.s9_pagination .swiper-pagination-bullet-active{
+	background-color: #322D2D;
 }

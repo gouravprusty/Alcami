@@ -6,6 +6,7 @@
 <title>ALCAMI - Achieve your highest self</title>
 <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.png">
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 
 <!-- <link rel="preload" href="assets/fonts/NewRailAlphabet-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -222,8 +223,43 @@
 	<div class="container">
 		<div class="s2_inner">
 			<div class="s2_left">
-				<div class="s2_slider_modal">
-					<img id="mainImg" src="assets/slide1.jpg" alt="Product">
+				
+				<div class="swiper mySwiper s2_slider_modal">
+					<div class="swiper-wrapper">
+
+						<div class="swiper-slide">
+							<img src="assets/slide1.jpg" alt="Product">
+						</div>
+
+						<div class="swiper-slide">
+							<img src="assets/slide2.jpg" alt="Product">
+						</div>
+
+						<div class="swiper-slide">
+							<img src="assets/slide3.jpg" alt="Product">
+						</div>
+
+						<div class="swiper-slide">
+							<img src="assets/slide4.jpg" alt="Product">
+						</div>
+
+						<div class="swiper-slide">
+							<img src="assets/slide5.png" alt="Product">
+						</div>
+
+						<div class="swiper-slide">
+							<img src="assets/slide6.png" alt="Product">
+						</div>
+
+						<div class="swiper-slide">
+							<img src="assets/slide7.png" alt="Product">
+						</div>
+
+						<div class="swiper-slide">
+							<img src="assets/slide8.png" alt="Product">
+						</div>
+
+					</div>
 					<div class="slide_buttons">
 						<button id="prevBtn">
 							<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -231,16 +267,7 @@
 							</svg>								
 						</button>
 
-						<div class="pagination">
-							<span class="dot active" onclick="showImage(0)"></span>
-							<span class="dot" onclick="showImage(1)"></span>
-							<span class="dot" onclick="showImage(2)"></span>
-							<span class="dot" onclick="showImage(3)"></span>
-							<span class="dot" onclick="showImage(4)"></span>
-							<span class="dot" onclick="showImage(5)"></span>
-							<span class="dot" onclick="showImage(6)"></span>
-							<span class="dot" onclick="showImage(7)"></span>
-						</div>
+						<div class="pagination"></div>
 
 						<button id="nextBtn">
 							<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -250,16 +277,35 @@
 					</div>
 				</div>
 
-				<div class="thumb_list">
-					<img class="thumbnail active" src="assets/slide1.jpg" onclick="showImage(0)">
-					<img class="thumbnail" src="assets/slide2.jpg" onclick="showImage(1)">
-					<img class="thumbnail" src="assets/slide3.jpg" onclick="showImage(2)">
-					<img class="thumbnail" src="assets/slide4.jpg" onclick="showImage(3)">
-					<img class="thumbnail" src="assets/slide5.png" onclick="showImage(4)">
-					<img class="thumbnail" src="assets/slide6.png" onclick="showImage(5)">
-					<img class="thumbnail" src="assets/slide7.png" onclick="showImage(6)">
-					<img class="thumbnail" src="assets/slide8.png" onclick="showImage(7)">
+				<div class="swiper mySwiper2">
+					<div class="thumb_list swiper-wrapper">
+						<div class="swiper-slide">
+							<img class="thumbnail" src="assets/slide1.jpg">
+						</div>
+						<div class="swiper-slide">
+							<img class="thumbnail" src="assets/slide2.jpg">
+						</div>
+						<div class="swiper-slide">
+							<img class="thumbnail" src="assets/slide3.jpg">
+						</div>
+						<div class="swiper-slide">
+							<img class="thumbnail" src="assets/slide4.jpg">
+						</div>
+						<div class="swiper-slide">
+							<img class="thumbnail" src="assets/slide5.png">
+						</div>
+						<div class="swiper-slide">
+							<img class="thumbnail" src="assets/slide6.png">
+						</div>
+						<div class="swiper-slide">
+							<img class="thumbnail" src="assets/slide7.png">
+						</div>
+						<div class="swiper-slide">
+							<img class="thumbnail" src="assets/slide8.png">
+						</div>
+					</div>
 				</div>
+				
 			</div>
 			<div class="s2_right">
 				<h1 class="s2_head">Alcami Elements</h1>
@@ -898,6 +944,7 @@
 <div class="section9">
 	<div class="container">
 		<div class="s9_inner">
+
 			<div class="s9_top">
 				<div class="s9_top_head">
 					<h1>What our customers are saying</h1>
@@ -917,97 +964,92 @@
 				</div>
 			</div>
 
-			<div class="s9_bottom">
-				<div class="s9_card">
-					<div class="s9_card_rating">
-						<img src="assets/s9_stars.svg" alt="stars">
-						<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."</p>
+			<div class="swiper mySwiper3">
+				<div class="swiper-wrapper">
+					<div class="s9_card swiper-slide">
+						<div class="s9_card_rating">
+							<img src="assets/s9_stars.svg" alt="stars">
+							<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."</p>
+						</div>
+						<p class="s9_card_name">
+							<img src="assets/s9_icon.jpg" alt="Icons">
+							Name Surname<br>
+							Position, Company name
+						</p>
 					</div>
-					<p class="s9_card_name">
-						<img src="assets/s9_icon.jpg" alt="Icons">
-						Name Surname<br>
-						Position, Company name
-					</p>
-				</div>
-				
-				<div class="s9_card">
-					<div class="s9_card_rating">
-						<img src="assets/s9_stars.svg" alt="stars">
-						<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."</p>
+					
+					<div class="s9_card swiper-slide">
+						<div class="s9_card_rating">
+							<img src="assets/s9_stars.svg" alt="stars">
+							<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."</p>
+						</div>
+						<p class="s9_card_name">
+							<img src="assets/s9_icon.jpg" alt="Icons">
+							Name Surname<br>
+							Position, Company name
+						</p>
 					</div>
-					<p class="s9_card_name">
-						<img src="assets/s9_icon.jpg" alt="Icons">
-						Name Surname<br>
-						Position, Company name
-					</p>
-				</div>
-
-				<div class="s9_card">
-					<div class="s9_card_rating">
-						<img src="assets/s9_stars.svg" alt="stars">
-						<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."</p>
+	
+					<div class="s9_card swiper-slide">
+						<div class="s9_card_rating">
+							<img src="assets/s9_stars.svg" alt="stars">
+							<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."</p>
+						</div>
+						<p class="s9_card_name">
+							<img src="assets/s9_icon.jpg" alt="Icons">
+							Name Surname<br>
+							Position, Company name
+						</p>
 					</div>
-					<p class="s9_card_name">
-						<img src="assets/s9_icon.jpg" alt="Icons">
-						Name Surname<br>
-						Position, Company name
-					</p>
-				</div>
-
-				<div class="s9_card">
-					<div class="s9_card_rating">
-						<img src="assets/s9_stars.svg" alt="stars">
-						<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."</p>
+	
+					<div class="s9_card swiper-slide">
+						<div class="s9_card_rating">
+							<img src="assets/s9_stars.svg" alt="stars">
+							<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."</p>
+						</div>
+						<p class="s9_card_name">
+							<img src="assets/s9_icon.jpg" alt="Icons">
+							Name Surname<br>
+							Position, Company name
+						</p>
 					</div>
-					<p class="s9_card_name">
-						<img src="assets/s9_icon.jpg" alt="Icons">
-						Name Surname<br>
-						Position, Company name
-					</p>
-				</div>
-
-				<div class="s9_card">
-					<div class="s9_card_rating">
-						<img src="assets/s9_stars.svg" alt="stars">
-						<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."</p>
+	
+					<div class="s9_card swiper-slide">
+						<div class="s9_card_rating">
+							<img src="assets/s9_stars.svg" alt="stars">
+							<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."</p>
+						</div>
+						<p class="s9_card_name">
+							<img src="assets/s9_icon.jpg" alt="Icons">
+							Name Surname<br>
+							Position, Company name
+						</p>
 					</div>
-					<p class="s9_card_name">
-						<img src="assets/s9_icon.jpg" alt="Icons">
-						Name Surname<br>
-						Position, Company name
-					</p>
-				</div>
-
-				<div class="s9_card">
-					<div class="s9_card_rating">
-						<img src="assets/s9_stars.svg" alt="stars">
-						<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."</p>
+	
+					<div class="s9_card swiper-slide">
+						<div class="s9_card_rating">
+							<img src="assets/s9_stars.svg" alt="stars">
+							<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."</p>
+						</div>
+						<p class="s9_card_name">
+							<img src="assets/s9_icon.jpg" alt="Icons">
+							Name Surname<br>
+							Position, Company name
+						</p>
 					</div>
-					<p class="s9_card_name">
-						<img src="assets/s9_icon.jpg" alt="Icons">
-						Name Surname<br>
-						Position, Company name
-					</p>
+	
 				</div>
-
 			</div>
 
-			<div class="s9_pagination">
-				<span class="s9_dot active"></span>
-				<span class="s9_dot"></span>
-				<span class="s9_dot"></span>
-				<span class="s9_dot"></span>
-				<span class="s9_dot"></span>
-				<span class="s9_dot"></span>
-				<span class="s9_dot"></span>
-				<span class="s9_dot"></span>
-			</div>
+			<div class="s9_pagination"></div>
+
 		</div>
 	</div>
 </div>
 
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

@@ -4,44 +4,6 @@ document.querySelector("#search_toggle").addEventListener("click", () => {
     document.querySelector("#header_input").classList.toggle("hidden");
 });
 
-// For slider images
-const images = ["assets/slide1.jpg", "assets/slide2.jpg", "assets/slide3.jpg", "assets/slide4.jpg", "assets/slide5.png", "assets/slide6.png", "assets/slide7.png", "assets/slide8.png"];
-let currentIndex = 0;
-const mainImage  = document.querySelector("#mainImg");
-const thumbnails = document.querySelectorAll(".thumbnail");
-const dots = document.querySelectorAll(".dot");
-
-document.getElementById("prevBtn").addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    updateImage();
-});
-
-document.getElementById("nextBtn").addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % images.length;
-    updateImage();
-});
-
-function showImage(index) {
-    currentIndex = index;
-    updateImage();
-}
-
-function updateImage() {
-    mainImage.style.transform = "translateX(-100%)";
-    setTimeout(() => {
-        mainImage.src = images[currentIndex];
-        mainImage.style.transform = "translateX(0)";
-    }, 450);
-
-    thumbnails.forEach((thumb, index) => {
-        thumb.classList.toggle("active", index === currentIndex);
-    });
-
-    dots.forEach((dot, index) => {
-        dot.classList.toggle("active", index === currentIndex);
-    });
-};
-
 document.addEventListener("DOMContentLoaded", function () {
 
     // For the radio options
@@ -113,63 +75,42 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     window.addEventListener("scroll", checkViewport);
     checkViewport();
+});
 
-    // for testimonial sliding
-    const cardsContainer = document.querySelector(".s9_bottom");
-    let cards = document.querySelectorAll(".s9_card");
-    const s9PrevBtn = document.getElementById("s9PrevBtn");
-    const s9NextBtn = document.getElementById("s9NextBtn");
-    const s9Dots = document.querySelectorAll(".s9_dot"); // Renamed dots to s9Dots
-    let visibleCards = 3;
-    let totalCards = cards.length;
-    let s9CurrentIndex = 0;
+// For section 2 product slider
+var mySwiper2  = new Swiper(".mySwiper2", {
+    slidesPerView:"auto",
+    watchSlidesProgress: true,
+    grabCursor:true,
+    centeredSlides: false,
+    allowTouchMove: false,
+});
+    var mySwiper  = new Swiper(".mySwiper", {
+    spaceBetween: 12,
+    navigation: {
+        nextEl: "#nextBtn",
+        prevEl: "#prevBtn",
+    },
+    pagination: {
+        el: ".pagination",
+        clickable: true,
+    },
+    thumbs: {
+        swiper: mySwiper2,
+    },
+    loop: true,
+});
 
-    for (let i = 0; i < visibleCards; i++) {
-        let clone = cards[i].cloneNode(true);
-        cardsContainer.appendChild(clone);
-    }
-
-    function updateSlider() {
-        let translateValue = -(s9CurrentIndex * (cards[0].offsetWidth + 20)) + "px";
-        cardsContainer.style.transition = "transform 0.5s ease-in-out";
-        cardsContainer.style.transform = `translateX(${translateValue})`;
-
-        s9Dots.forEach(dot => dot.classList.remove("active"));
-        s9Dots[s9CurrentIndex % totalCards]?.classList.add("active");
-    }
-
-    s9NextBtn.addEventListener("click", function () {
-        s9CurrentIndex++;
-        updateSlider();
-
-        if (s9CurrentIndex >= totalCards) {
-            setTimeout(() => {
-                s9CurrentIndex = 0;
-                cardsContainer.style.transition = "none";
-                updateSlider();
-            }, 500);
-        }
-    });
-
-    s9PrevBtn.addEventListener("click", function () {
-        if (s9CurrentIndex <= 0) {
-            s9CurrentIndex = totalCards;
-            cardsContainer.style.transition = "none";
-            updateSlider();
-        }
-        setTimeout(() => {
-            s9CurrentIndex--;
-            cardsContainer.style.transition = "transform 0.5s ease-in-out";
-            updateSlider();
-        }, 10);
-    });
-
-    s9Dots.forEach((dot, index) => {
-        dot.addEventListener("click", function () {
-            s9CurrentIndex = index;
-            updateSlider();
-        });
-    });
-
-    updateSlider();
+// For section 9 testimonial slider
+let swiper3 = new Swiper(".mySwiper3", {
+    slidesPerView: 3,
+    loop: true,
+    pagination: {
+      el: ".s9_pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: "#s9NextBtn",
+      prevEl: "#s9PrevBtn",
+    },
 });
