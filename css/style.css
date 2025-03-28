@@ -383,7 +383,7 @@ li {list-style: none;}
 	font-family: New Rail Alphabet;
 	font-weight: 300;
 	font-size: 36px;
-	line-height: 100%;
+	line-height: 120%;
 	letter-spacing: 0px;
 	color: #322D2D;
 	margin-top: 30px;
@@ -1022,8 +1022,8 @@ li {list-style: none;}
 	align-items: flex-start;
 }
 .s4_subs{
-	font-family: Oxanium;
-	font-weight: 400;
+	font-family: "New Rail Alphabet";
+	font-weight: 300;
 	font-size: 12.43px;
 	line-height: 100%;
 	letter-spacing: 3.14px;
@@ -1225,8 +1225,6 @@ li {list-style: none;}
 	align-items: center;
 }
 .s7_lines{
-	font-family: Oxanium;
-	font-weight: 300;
 	font-size: 40px;
 	line-height: 100%;
 	color: #322D2D;
@@ -1558,4 +1556,306 @@ li {list-style: none;}
 .pagination .swiper-pagination-bullet-active,
 .s9_pagination .swiper-pagination-bullet-active{
 	background-color: #322D2D;
+}
+
+/* ------ SECTION 10 ------ */
+.section10{
+	width: 100%;
+	padding: 90px 0;
+}
+.s10_inner{
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+.s10_left{
+	width: 35%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	text-align: left;
+}
+.s10_head{
+	font-family: New Rail Alphabet;
+	font-weight: 300;
+	font-size: 40px;
+	line-height: 100%;
+	color: #322D2D;
+}
+.s10_text{
+	width: 100%;
+	font-family: New Rail Alphabet;
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 150%;
+	color: #322D2D;
+	margin-top: 25px;
+}
+.s10_right{
+	width: 56%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	text-align: left;
+}
+.accordion_cover{
+	width: 100%;
+	border-bottom: 1px solid #322D2D;
+}
+.accordion_heading{
+	width: 100%;
+	font-family: New Rail Alphabet;
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 150%;
+	color: #322D2D;
+	padding: 25px 60px 25px 25px;
+	position: relative;
+	cursor: pointer;
+}
+.accordion_heading::after{
+	content: "\002B";
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 30px;
+	font-size: 28px;
+	color: #322D2D;
+}
+.accordion_heading.active::after{
+	content: "\2212";
+}
+.accordion_panel{
+	width: 100%;
+	max-height: 0;
+	overflow: hidden;
+  	transition: max-height 0.2s ease-out;
+}
+.accordion_text{
+	width: 100%;
+	color: #322D2D;
+	font-family: New Rail Alphabet;
+	font-weight: 300;
+	font-size: 17px;
+	line-height: 130%;
+	padding: 0 25px 22px;
+}
+
+.faq_link{
+	width: 100%;
+	margin-top: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.faq_link a{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 10px;
+	font-family: New Rail Alphabet;
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 150%;
+	color: #322D2D;
+}
+
+/* ------ SECTION 11 ------ */
+.section11{
+	width: 100%;
+	padding-bottom: 90px;
+}
+.s11_inner{
+	width: 100%;
+	padding: 80px 50px 250px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: url(../assets/s11_bg.jpg) no-repeat center center;
+	background-size: cover;
+	border-radius: 16px;
+}
+.s11_inner h1{
+	width: 55%;
+	font-family: 'New Rail Alphabet White';
+	font-weight: 200;
+	font-size: 42.32px;
+	line-height: 130%;
+	color: #fff;
+}
+.s11_inner p{
+	font-family: 'New Rail Alphabet White';
+	font-weight: 200;
+	font-size: 21.16px;
+	line-height: 150%;
+	color: #fff;
+	margin-top: 30px;
+}
+.s11_inner input{
+	margin-top: 30px;
+	width: 538px;
+	padding: 12px 15px;
+	border: 1px solid #fff;
+	outline: none;
+	background-color: transparent;
+	font-family: "New Rail Alphabet white";
+	font-weight: 200;
+	font-size: 21.16px;
+	line-height: 150%;
+	color: #fff;
+}
+.s11_inner input::placeholder{
+	color: #fff;
+}
+.s11_inner button{
+	background-color: #fff;
+	border-radius: 50px;
+	border: none;
+	outline: none;
+	margin-top: 18px;
+	font-family: New Rail Alphabet;
+	font-weight: 300;
+	font-size: 21.16px;
+	line-height: 17.12px;
+	color: #667744;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 66px;
+	padding: 14px 25px;
+	cursor: pointer;
+}
+
+/* ------ FOOTER ------ */
+.footer{
+	width: 100%;
+	padding: 80px 0;
+	background-color: #322D2D;
+}
+.footer_inner{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.footer_logo{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+.footer_logo img{
+	width: 325px;
+	filter: brightness(0) invert(1);
+	max-width: 100%;
+}
+
+
+.footer_mid{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	text-align: left;
+	margin-top: 60px;
+}
+.footer_mid_left{
+	width: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	row-gap: 16px;
+}
+.footer_mid_left li{
+	width: 30%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+.footer_mid_left li a{
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	column-gap: 12px;
+	font-family: "New Rail Alphabet white";
+	font-weight: 200;
+	font-size: 14.16px;
+	line-height: 150%;
+	color: #fff;
+}
+.newsletter{
+	width: 37.5%;
+	display: flex;
+	flex-direction: column;
+}
+.newsletter h2{
+	color: #DEA453;
+	font-family: New Rail Alphabet;
+	font-weight: 700;
+	font-size: 16.18px;
+	line-height: 150%;
+}
+.newsletter form{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 15px;
+}
+.newsletter form input{
+	width: 72%;
+	height: 50px;
+	border: 1px solid #fff;
+	outline: none;
+	background-color: transparent;
+	padding: 5px 15px;
+	font-family: "New Rail Alphabet white";
+	font-weight: 200;
+	font-size: 16.18px;
+	line-height: 150%;
+	color: #fff;
+}
+.newsletter form input::placeholder{
+	color: #fff;
+	font-family: "New Rail Alphabet white";
+	font-weight: 200;
+}
+.newsletter form button{
+	width: 25%;
+	height: 50px;
+	background-color: #fff;
+	border: none;
+	outline: none;
+	font-family: "New Rail Alphabet white";
+	font-weight: 200;
+	font-size: 16.18px;
+	line-height: 150%;
+	color: #DEA453;
+	cursor: pointer;
+}
+.newsletter p{
+	width: 100%;
+	margin-top: 18px;
+	color: #fff;
+	font-family: "New Rail Alphabet white";
+	font-weight: 200;
+	font-size: 12.14px;
+	line-height: 150%;
+}
+.newsletter p a{
+	text-decoration: underline;
+}
+
+
+.footer_bottom{
+	margin-top: 60px;
+	font-family: "New Rail Alphabet white";
+	font-weight: 200;
+	font-size: 16.18px;
+	line-height: 120%;
+	letter-spacing: 0%;
+	vertical-align: bottom;
+	text-transform: uppercase;
+	color: #DEA453;
 }

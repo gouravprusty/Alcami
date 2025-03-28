@@ -114,3 +114,25 @@ let swiper3 = new Swiper(".mySwiper3", {
       prevEl: "#s9PrevBtn",
     },
 });
+
+// For accordion
+let accordions = document.querySelectorAll(".accordion_heading");
+
+accordions.forEach((accordion) => {
+    accordion.addEventListener("click", function() {
+        accordions.forEach((acc) => {
+            if (acc !== this) {
+                acc.classList.remove("active");
+                acc.nextElementSibling.style.maxHeight = null;
+            }
+        });
+
+        this.classList.toggle("active");
+        let panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+    });
+});
