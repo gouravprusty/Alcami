@@ -50,16 +50,16 @@ document.addEventListener("DOMContentLoaded", function () {
     function startCounter(counter) {
         let finalValue = parseInt(counter.textContent);
         let currentValue = 0;
-        let speed = Math.ceil(finalValue / 50); // Adjust speed for smooth effect
+        let speed = Math.ceil(finalValue / 50);
 
         let interval = setInterval(() => {
             currentValue += speed;
             if (currentValue >= finalValue) {
-                currentValue = finalValue; // Ensure exact value
-                clearInterval(interval); // Stop animation
+                currentValue = finalValue;
+                clearInterval(interval);
             }
             counter.textContent = currentValue + "%";
-        }, 50); // Adjust interval speed
+        }, 50);
     }
 
     function checkViewport() {
@@ -85,8 +85,7 @@ var mySwiper2  = new Swiper(".mySwiper2", {
     centeredSlides: false,
     allowTouchMove: false,
 });
-    var mySwiper  = new Swiper(".mySwiper", {
-    spaceBetween: 12,
+var mySwiper  = new Swiper(".mySwiper", {
     navigation: {
         nextEl: "#nextBtn",
         prevEl: "#prevBtn",
@@ -104,6 +103,7 @@ var mySwiper2  = new Swiper(".mySwiper2", {
 // For section 9 testimonial slider
 let swiper3 = new Swiper(".mySwiper3", {
     slidesPerView: 3,
+    spaceBetween: 25,
     loop: true,
     pagination: {
       el: ".s9_pagination",
@@ -112,6 +112,20 @@ let swiper3 = new Swiper(".mySwiper3", {
     navigation: {
       nextEl: "#s9NextBtn",
       prevEl: "#s9PrevBtn",
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+            navigation: false,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 25,
+        },
+        1023: {
+            slidesPerView: 3,
+            spaceBetween: 25,
+        },
     },
 });
 
@@ -137,6 +151,7 @@ accordions.forEach((accordion) => {
     });
 });
 
+// For Mobile menu
 const menu_icon = document.querySelector(".hamburger_menu");
 const menu_container = document.querySelector(".mobile_menu_container");
 const menu_close = document.querySelector(".menu_close");
